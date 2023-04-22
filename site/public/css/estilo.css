@@ -1,116 +1,166 @@
+@import url();
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Barlow', 'Segoe UI', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: black;
+    scrollbar-width: thin;
+    color: #1E1E1E;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background-image: url(../assets/img/banner-background.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: -2vw left;
 }
 
-:root {
-  --tamanho-header: 80px;
-  --tamanho-banner: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-simulador: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-login: calc(100vh - var(--tamanho-header) - var(--tamanho-footer) - 2px);
-  --tamanho-footer: 65px;
+header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
 }
 
-.container {
-  display: flex;
-  width: 80%;
-  margin: auto;
+nav {
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 12vh;
+    padding: 8vh 9vw 6vh 10vw;
+    transition: 0.6s;
+    z-index: 5;
 }
 
-.header {
-  height: var(--tamanho-header);
-  border-bottom: 2px solid #32b9cd;
+/* .logo {
+    max-height: 12vh;
+} */
+
+.nav-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: 'Codec Warm Trial';
+    font-weight: 700;
+    text-decoration: none;
+    align-items: right;
+    color: #fff;
+    gap: 55px;
 }
 
-.header .container {
-  justify-content: space-between;
-  align-items: center;
-  height: 100%;
+nav ul li {
+    list-style: none;
+    display: inline-block;
 }
 
-.header a {
-  text-decoration: none;
-  color: #e3b062;
+nav ul li a {
+    text-decoration: none;
+    color: #946cc2;
+    border-bottom: 2px solid transparent;
+    transition: .4s;
 }
 
-.agora {
-  font-weight: 800;
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a:focus {
+    border-bottom: 2px solid #441975;
 }
 
-.navbar {
-  width: 300px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  list-style: none;
-  color: #e3b062;
+
+.nav-list :hover {
+    color: #441975;
 }
 
-.titulo {
-  color: #32b9cd;
-  width: fit-content;
-  font-weight: 500;
+a {
+    color: #946cc2;
 }
 
-.header h1 {
-  margin: 0;
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 95%;
+    height: 80vh;
+    gap: 3vh;
+    padding: 5vh 10vw 10vh 5vw;
+    margin: 30vh 0 15vh 0;
 }
 
-.banner {
-  height: var(--tamanho-banner);
-  background-image: url('../assets/imgs/bg-jelly-fish-para-home.png');
-  background-size: cover;
+.header-content h1 {
+    position: absolute;
+    font-family: 'LEMON MILK';
+    font-style: normal;
+    line-height: 8vh;
+    font-size: 4.2vw;
+    color: #561C98;
 }
 
-.banner .container {
-  justify-content: center;
-  align-items: center;
-  height: 100%;
+.header-content p {
+    margin-top: 133px;
+    width: 47%;
+    font-size: 1.3vw;
+    justify-content: left;
 }
 
-.banner .container p {
-  font-size: 36px;
-  color: white;
-  width: 280px;
+#btn-header {
+    font-family: 'Codec Warm Trial';
+    width: 10vw;
+    color: #ffff;
+    font-size: 17px;
+    font-weight: 700;
+    background-color: #8653BE;
+    border: none;
+    border-radius: 16px;
+    padding: 10px;
+    cursor: pointer;
 }
 
-.banner .container span {
-  font-weight: 800;
+#btn-header:hover {
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    background-color: #8653BE;
+    box-shadow: 0px 0px 7px #8653BE;
 }
 
-.social {
-  background-color: #e5e5e5;
-  display: flex;
+.sobreobra {
+    /* display: flex; */
+    position: relative;
+    flex-direction: column;
+    padding: 1vh 10vw 10vh 10vw;
+
 }
 
-.social .container {
-  justify-content: center;
+.jolyne-shape {
+    max-height: 80vh;
 }
 
-.box img {
-  width: 170px;
+.titulo-obra {
+    position: absolute;
+    font-family: 'LEMON MILK';
+    font-style: normal;
+    line-height: 8vh;
+    font-size: 4.2vw;
+    color: #561C98;
+    justify-content: right;
+    padding-left: 50%;
+    padding-top: 7%;
 }
 
-.social .container .boxes {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
+.sinopse {
+    width: 47%;
+    font-size: 1.3vw;
+    justify-content: right;
 }
 
-.box {
-  width: 280px;
-  height: 450px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.box p {
-  text-align: center;
-}
 
 .login {
   height: var(--tamanho-login);
