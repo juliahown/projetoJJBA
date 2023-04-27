@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1B1724;
+}
+
+main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/assets/imgs/background.svg');
+    background-size: cover;
+    background-repeat: none;
+    background-position: center;
+}
+
+/* ínicio da Header */
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 4vh;
+    color: #482077;
+    margin-left: -31%;
+    height: 0px;
+    width: 90px;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    margin-left: 10%;
+    width: 55%;
+    padding: 8vh 9vw 6vh 10vw;
+    transition: 0.6s ease-in;
+    z-index: 5;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 18px 25px;
+    color: #946cc2;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    border-bottom: 2px solid transparent;
+    transition: .4s;
+}
+
+nav a:hover {
+    color: #946cc2;
+    transition: .3s;
+}
+
+.search-box {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    top: 9.5%;
+    left: 60%;
+    background: black;
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+}
+
+.search-txt {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    color: white;
+    font-size: 13px;
+    line-height: 40px;
+    width: 0;
+    transition: .4s;
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .4s;
+}
+
+.search-box:hover > .search-txt {
+    width: 200px;
+    padding: 0 6px;
+}
+
+.search-box:hover > .search-btn {
+    background: #653FB4;
+}
+
+/* -- ínicio do conteúdo da Landing Page*/
+
+.content {
+    display: flex;
+    line-height: 4vh;
+    margin-top: 6vh;
+}
+
+.content .info {
+    margin-left: 8.5vw;
+    line-height: 6vh;
+    align-items: left;
+    color: white;
+}
+
+.content .info h3 {
+    color: #B04991;
+    font: 200;
+    font-size: 25px;
+}
+
+.content .info h1 {
+    font-size: 83px;
+    font-weight: 800;
+    line-height: 11.5vh;
+}
+
+.content .info .description {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 4vh;
+}
+
+.info-btn {
+    background-color: #653FB4;
+    color: white;
+    font-size: 17px;
+    padding: 1.5vh 3vw;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.content .info .rating {
+    line-height: 6vh;
+}
+
+.content .info .last-info {
+    margin-top: 6vh;
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    justify-content: space-between;
+    width: 70%;
+    line-height: 4.5vh;
+}
+
+/* -- ínicio da página Sobre a Obra */
