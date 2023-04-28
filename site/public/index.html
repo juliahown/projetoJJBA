@@ -9,6 +9,8 @@
     <title>JoJo's Bizarre Adventures</title>
 
     <script src="./js/funcoes.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <link rel="icon" href="assets/logo.svg">
     <link rel="stylesheet" href="./css/index-style.css">
@@ -17,15 +19,16 @@
 
 <body>
 
-    <main class="main">
+    <main class="main" id="home">
         <header>
             <div class="container">
                 <nav>
                     <h1 class="logo">JJBA PROJECT</h1>
+                    <!-- <img class="JJBA" src="./assets/logo.svg" alt="JoJo Logo"> -->
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Sobre</a></li>
-                        <li><a href="#">Personagens</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#sobreobra">Sobre</a></li>
+                        <li><a href="#personas">Personagens</a></li>
                         <li><a href="#">Login</a></li>
                     </ul>
                     <div class="search-box">
@@ -41,11 +44,11 @@
         <div class="content">
             <div class="info">
                 <h3>ジョジョの奇妙な冒険</h3>
-                <h1>JoJo's Bizarre <br> Adventures</h1>
+                <h1 data-aos="fade-down">JoJo's Bizarre <br> Adventures</h1>
                 <p class="description">JoJo's conta a história da família Joestar, parentes cujo os diversos <br>
                     integrantes
                     descobrem que estão destinados a derrubar <br> vários inimigos sobrenaturais.</p> <br>
-                <a href="#" class="info-btn">Saiba mais</a> <br>
+                <a href="#sobreobra" class="info-btn">Saiba mais</a> <br>
                 <div class="last-info">
                     <div class="rating">Classificação <br> <img src="./assets/assets/imgs/rating.svg"></div><br>
                     <p>Autor: <br> Hirohiko Araki</p>
@@ -54,9 +57,36 @@
         </div>
         </div>
     </main>
-    <section class="obra">
-
+    <section data-aos="fade-down" class="obra" id="sobreobra">
+        <div class="obra-content">
+            <div class="obra-info" data-aos="fade-up">
+                <h3>Sobre a obra</h3>
+                <p class="paragraph">
+                    JoJo's Bizarre Adventure conta a história da familia Joestar, uma família fora do comum, <br> que possui uma linhagem familiar no qual os integrantes possuem alguns superpoderes <br> (chamados “Hamon” e “Stand”), 
+                    destinada a combater vilões ao longo de diferentes <br> gerações a partir do século 19 até os tempos modernos.
+                </p>
+                <br>
+                <p class="paragraph">
+                    A sua obra consquistou milhares de fãs ao longo de quase uma decáda por sua forma <br> artística e única de traços e desenvolvimento 
+                    de história. JoJo é uma obra tem fortes <br> inspirações em artistas e pintores famosos da história, de músicas e filmes e até mesmo <br> do ator Arnold
+                    Schwarzenegger e seus filmes de ação. JoJo's Bizarre Adventure é uma <br> série com inúmeras referências musicais, em personagens e capítulos, onde quase tudo <br> da 
+                    obra é criada a partir de alguma inspiração de música, álbuns e artistas musicais. 
+                </p>
+            </div>
+            <div class="obra-img"><img src="./assets/assets/imgs/obra-img.svg"></div>
+        </div>
+    </section>
+    <section class="personagens" id="personas">
+        <div class="p-content">
+            <div class="p-info">
+                <h1>Personagens</h1>
+            </div>
+        </div>
     </section>
 </body>
 
 </html>
+
+<script>
+    AOS.init();
+  </script>

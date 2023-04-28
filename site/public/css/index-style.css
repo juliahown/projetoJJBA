@@ -7,11 +7,25 @@
     font-family: 'Poppins';
 }
 
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#B04991,#482077);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#B04991,#946cc2);
+}
+
 body {
     margin: 0;
     height: 100vh;
     width: 100vw;
     background-color: #1B1724;
+    overflow-x: hidden;
 }
 
 main {
@@ -30,7 +44,7 @@ main {
     justify-content: space-between;
     align-items: center;
     line-height: 4vh;
-    color: #482077;
+    color: #692B57;
     margin-left: -31%;
     height: 0px;
     width: 90px;
@@ -80,6 +94,7 @@ nav a:hover {
     top: 9.5%;
     left: 60%;
     background: black;
+    opacity: 70%;
     height: 40px;
     padding: 10px;
     border-radius: 40px;
@@ -176,3 +191,50 @@ nav a:hover {
 }
 
 /* -- ínicio da página Sobre a Obra */
+
+.obra-content{
+    margin-left: 10vw;
+    margin-top: 10vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.obra-content .obra-info {
+    color: white;
+    justify-content: left;
+}
+
+.obra-content .obra-info h3 {
+    font-size: 35px;
+}
+
+.obra-content .obra-info .paragraph {
+    font-size: 16px;
+}
+
+.obra-content .obra-img {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 5vw;
+}
+
+/* ínicio da página sobre Personagens */
+
+.p-content {
+    margin-left: 10vw;
+    margin-top: 10vh;
+    margin-bottom: 20vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.p-content .p-info {
+    color: white;
+}
+
+.p-content .p-info h1{
+    font-size: 35px;
+}
