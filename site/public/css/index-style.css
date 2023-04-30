@@ -222,32 +222,56 @@ nav a:hover {
 
 /* ínicio da página sobre Personagens */
 
-.p-content {
+.char-content {
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+}
+
+.card {
+    width: 250px;
+    height: 415px;
+    margin: 100px auto 0;
+    background: #fff;
+
+}
+
+/* CARD 01 - Jonathan Joestar */
+
+.card-jonathan {
     width: 100%;
     height: 100%;
-    margin-left: 10vw;
-    margin-top: 10vh;
-    margin-bottom: 20vh;
-    align-items: center;
+    position: relative;
+}
+
+.front, .back {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.front {
+    background: url("../assets/assets/imgs/personagens/jonathan02.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 30px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: #fff;
 }
 
-.p-content .p-info {
-    color: white;
+.front h2 {
+    font-weight: 700;
+    color: #fff;
+    font-size: 23px;
+
 }
 
-.p-content .p-info h1{
-    font-size: 35px;
-}
-
-.p-content .p-title {
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.p-content .p-jojos {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.front p {
+    color: #fff;
+    font-size: 13px;
 }
