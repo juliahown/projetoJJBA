@@ -23,41 +23,53 @@
 
 <body>
 
+    <!-- CONTEÚDO DA NAVIGATION (NAVBAR) -->
+    <header>
+        <div class="container">
+            <nav>
+                <h1 class="logo">JJBA PROJECT</h1>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#sobreobra">Anime</a></li>
+                    <li><a href="#quiz">Quiz</a></li>
+                    <li><a href="#sobremim">Sobre nós</a></li>
+                </ul>
+                <!-- <div class="search-box">
+                    <input type="text" class="search-txt" placeholder="Pesquisar">
+                    <a href="" class="search-btn">
+                        <img src="./assets/loupe.png" alt="Lupa" height="15" width="15">
+                    </a>
+                </div> -->
+                <div class="btn-user">
+                    <a href="#login" class="btn-login">Login</a>
+                    <a href="#cadastro" class="btn-signup">Cadastro</a>
+                </div>
+            </nav>
+    </header>
+
+    <!-- LANDING PAGE DO SITE -->
     <main class="main" id="home">
-        <header>
-            <div class="container">
-                <nav>
-                    <h1 class="logo">JJBA PROJECT</h1>
-                    <!-- <img class="JJBA" src="./assets/logo.svg" alt="JoJo Logo"> -->
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#sobreobra">Sobre</a></li>
-                        <li><a href="#personas">Personagens</a></li>
-                        <li><a href="#">Login</a></li>
-                    </ul>
-                    <div class="search-box">
-                        <input type="text" class="search-txt" placeholder="Pesquisar">
-                        <a href="" class="search-btn">
-                            <img src="./assets/loupe.png" alt="Lupa" height="15" width="15">
-                        </a>
-                    </div>
-                    <br>
-                </nav>
-        </header>
-
-        <!-- LANDING PAGE DO SITE -->
-
         <div class="content">
-            <div class="info">
-                <h3>ジョジョの奇妙な冒険</h3>
-                <h1 data-aos="fade-down">JoJo's Bizarre <br> Adventures</h1>
-                <p class="description">JoJo's conta a história da família Joestar, parentes cujo os diversos <br>
-                    integrantes
-                    descobrem que estão destinados a derrubar <br> vários inimigos sobrenaturais.</p> <br>
-                <a href="#sobreobra" class="info-btn">Saiba mais</a> <br>
-                <div class="last-info">
-                    <div class="rating">Classificação <br> <img src="./assets/assets/imgs/rating.svg"></div><br>
-                    <p>Autor: <br> Hirohiko Araki</p>
+            <div class="info" data-aos="fade-down">
+                <h1>JoJo's Bizarre <br> Adventures</h1>
+                <p class="description">JoJo's conta a história da família Joestar, parentes cujo <br> os diversos
+                    integrantes descobrem que estão destinados <br> a derrubar vários inimigos sobrenaturais.</p> <br>
+                <div class="land-btns">
+                    <a href="#sobreobra" class="info-btn">Saiba mais</a>
+                    <a href="https://youtu.be/fvSKmPdD2a4" class="trailer-btn">Assistir trailer</a>
+                </div>
+                <br>
+                <div class="wrapper">
+                    <i id="left" class="fa-solid fa-angle-left"></i>
+                    <div class="carousel">
+                        <img src="./assets/imgs/carousel/photo2.png" alt="img">
+                        <img src="./assets/imgs/carousel/photo1.png" alt="img">
+                        <img src="./assets/imgs/carousel/photo3.png" alt="img">
+                        <img src="./assets/imgs/carousel/photo4.jpg" alt="img">
+                        <img src="./assets/imgs/carousel/photo5.jpg" alt="img">
+                        <img src="./assets/imgs/carousel/photo6.jpeg" alt="img">
+                    </div>
+                    <i id="right" class="fa-solid fa-angle-right"></i>
                 </div>
             </div>
         </div>
@@ -93,41 +105,6 @@
     </section>
     <!-- FIM DA SECTION SOBRE A OBRA -->
 
-        <!-- SECTION DOS PERSONAGENS -->
-    <section class="personagens" id="personas">
-        <div class="char-content">
-            <div class="card">
-                <div class="card-jonathan">
-                    <div class="front">
-                        <h2>Jonathan Joestar</h2>
-                            <p>1ª Temporada - Phantom Blood</p>
-                    </div>
-                    <div class="back"></div>
-                </div>
-            </div>
-            <!-- Card do Joseph -->
-            <div class="card">
-                <div class="card-jonathan">
-                    <div class="front">
-                        <h2>Jonathan Joestar</h2>
-                            <p>2ª Temporada - Battle Tendency</p>
-                    </div>
-                    <div class="back"></div>
-                </div>
-            <!-- Card do Jotaro -->
-            <div class="card">
-                <div class="card-jonathan">
-                    <div class="front">
-                        <h2>Jonathan Joestar</h2>
-                            <p>3ª Temporada - Stardust Crusaders</p>
-                    </div>
-                    <div class="back"></div>
-                </div>
-            </div>
-            </div>
-        </div>
-        </div>
-    </section>
 </body>
 
 </html>

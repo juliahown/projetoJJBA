@@ -12,12 +12,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#B04991,#482077);
+    background: linear-gradient(#46485E,#95637F);
     border-radius: 7px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(#B04991,#946cc2);
+    background: linear-gradient(#95637F,#946cc2);
 }
 
 body {
@@ -26,12 +26,15 @@ body {
     width: 100vw;
     background-color: #1B1724;
     overflow-x: hidden;
+    background: url(../assets/imgs/bg.jpg);
+    background-size: cover;
+    background-repeat: none;
 }
 
 main {
     height: 100vh;
     width: 100vw;
-    background-image: url('../assets/assets/imgs/background.svg');
+    /* background-image: url('../assets/assets/background-lnd.svg'); */
     background-size: cover;
     background-repeat: none;
     background-position: center;
@@ -41,14 +44,10 @@ main {
 
 .logo {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    line-height: 4vh;
-    color: #692B57;
-    margin-left: -31%;
+    color: #fff;
     height: 0px;
-    width: 90px;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 nav {
@@ -59,9 +58,9 @@ nav {
     align-items: center;
     list-style: none;
     font-weight: bold;
-    margin-left: 10%;
-    width: 55%;
-    padding: 8vh 9vw 6vh 10vw;
+    margin: 0vw;
+    width: 100%;
+    padding: 6vh 9vw 6vh 10vw;
     transition: 0.6s ease-in;
     z-index: 5;
 }
@@ -71,7 +70,7 @@ nav ul li {
     font-size: 18px;
     display: inline-block;
     padding: 18px 25px;
-    color: #946cc2;
+    color: #95637F;
 }
 
 nav ul li a {
@@ -82,7 +81,7 @@ nav ul li a {
 }
 
 nav a:hover {
-    color: #946cc2;
+    color: #95637F;
     transition: .3s;
 }
 
@@ -92,9 +91,8 @@ nav a:hover {
     justify-content: space-between;
     align-items: center;
     top: 9.5%;
-    left: 60%;
+    left: 70%;
     background: black;
-    opacity: 70%;
     height: 40px;
     padding: 10px;
     border-radius: 40px;
@@ -132,62 +130,165 @@ nav a:hover {
     background: #653FB4;
 }
 
-/* -- ínicio do conteúdo da Landing Page*/
+/* New user Login and Sign Up buttons  */
 
-.content {
+.btn-user {
     display: flex;
-    line-height: 4vh;
-    margin-top: 6vh;
+    justify-content: space-between;
+    gap: 1vw;
 }
 
-.content .info {
-    margin-left: 8.5vw;
-    line-height: 6vh;
-    align-items: left;
+.btn-login {
+    background-color: #000;
     color: white;
-}
-
-.content .info h3 {
-    color: #B04991;
-    font: 200;
-    font-size: 25px;
-}
-
-.content .info h1 {
-    font-size: 83px;
-    font-weight: 800;
-    line-height: 11.5vh;
-}
-
-.content .info .description {
-    font-family: 'Poppins';
-    font-weight: 300;
-    font-size: 18px;
-    line-height: 4vh;
-}
-
-.info-btn {
-    background-color: #653FB4;
-    color: white;
-    font-size: 17px;
-    padding: 1.5vh 3vw;
+    font-size: 16px;
+    padding: 1vh 2vw;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
 }
 
-.content .info .rating {
-    line-height: 6vh;
+.btn-signup {
+    background-color: #000;
+    color: white;
+    font-size: 16px;
+    padding: 1vh 1vw;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
-.content .info .last-info {
-    margin-top: 6vh;
+/* -- ínicio do conteúdo da Landing Page*/
+
+.content {
     display: flex;
+    line-height: 3vh;
+    margin-top: 5vh;
+}
+
+.content .info {
+    margin-left: 8.5vw;
+    align-items: left;
+    color: white;
+}
+
+.content .info h1 {
+    font-size: 70px;
+    font-weight: 800;
+    line-height: 9vh;
+    margin-bottom: 11px;
+}
+
+.content .info .description {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 3.5vh;
+    margin-bottom: 10px;
+}
+
+.land-btns {
+    display: flex;
+    justify-content: left;
     align-items: center;
+    gap: 2vw;
+}
+
+.info-btn {
+    background-color: #95637F;
+    color: white;
+    font-size: 17px;
+    padding: 1vh 2vw;
+    border-radius: 20px;
+    text-decoration: none;
     font-weight: 600;
-    justify-content: space-between;
-    width: 70%;
-    line-height: 4.5vh;
+}
+
+.trailer-btn {
+    /* background: #95637F; */
+    display: inline-block;
+    color: white;
+    font-size: 17px;
+    padding: 1vh 1.5vw;
+    border: 2px solid #95637F;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Slideshow photos */
+
+.wrapper {
+    margin-top: 6vh;
+    max-width: 750px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    padding: 0 35px;
+    margin-left: 15vw;
+}
+
+.wrapper i {
+    height: 45px;
+    width: 45px;
+    top: 50%;
+    text-align: center;
+    line-height: 45px;
+    background: #000;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    font-size: 1.2rem;
+    transform: translateY(-50%);
+}
+
+.wrapper i:first-child {
+    left: -23px;
+}
+
+.wrapper i:last-child {
+    right: -23px;
+}
+
+.wrapper .carousel {
+    cursor: pointer;
+    overflow: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+}
+
+.carousel.dragging {
+    scroll-behavior: auto;
+    cursor: grab;
+}
+
+.carousel.dragging img {
+    pointer-events: none;
+}
+
+.carousel img {
+    height: 160px;
+    border-radius: 25px;
+    object-fit: cover;
+    width: calc(97%/3);
+    margin-left: 5px;
+    border: 3px solid #fff;
+}
+
+.carousel img:first-child {
+    margin-left: 0px;
+
+}
+
+@media screen and (max-width: 900px) {
+    .carousel img {
+        width: calc(98%/2);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .carousel img {
+        width: 100%;
+    }
 }
 
 /* -- ínicio da página Sobre a Obra */
