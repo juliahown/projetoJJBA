@@ -295,7 +295,7 @@ nav a:hover {
 
 .obra-content{
     margin-left: 10vw;
-    margin-top: 10vh;
+    margin-top: 11vh;
     align-items: center;
     display: flex;
     justify-content: space-between;
@@ -307,11 +307,29 @@ nav a:hover {
 }
 
 .obra-content .obra-info h3 {
-    font-size: 35px;
+    font-size: 60px;
+    line-height: 7vh;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.obra-content .obra-info h3 span {
+    color: #95637F;
 }
 
 .obra-content .obra-info .paragraph {
     font-size: 16px;
+}
+
+.btn-moreanime {
+    display: inline-block;
+    color: white;
+    font-size: 17px;
+    padding: 1vh 1.5vw;
+    border: 3px solid #95637F;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
 }
 
 .obra-content .obra-img {
@@ -319,60 +337,4 @@ nav a:hover {
     align-items: center;
     justify-content: flex-start;
     margin-right: 5vw;
-}
-
-/* ínicio da página sobre Personagens */
-
-.char-content {
-    width: 100%;
-    min-height: 100vh;
-    align-items: center;
-    display: flex;
-    padding: 10px;
-    justify-content: flex-end;
-}
-
-.card {
-    width: 250px;
-    height: 415px;
-    margin: 100px auto 0;
-    background: #fff;
-
-}
-
-/* CARD 01 - Jonathan Joestar */
-
-.card-jonathan {
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.front, .back {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-}
-
-.front {
-    background: url("../assets/assets/imgs/personagens/jonathan02.jpg");
-    background-size: cover;
-    background-position: center;
-    padding: 30px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    color: #fff;
-}
-
-.front h2 {
-    font-weight: 700;
-    color: #fff;
-    font-size: 23px;
-
-}
-
-.front p {
-    color: #fff;
-    font-size: 13px;
 }
