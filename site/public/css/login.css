@@ -11,11 +11,16 @@ body {
     background-size: 100vh auto;
 }
 
+.button {
+    margin-top: 5vh;
+    margin-left: 3vw;
+}
+
 .container {
     display: flex;
     justify-content: right;
-    margin-top: 40vh;
-    margin-right: 15vw;
+    margin-top: 24vh;
+    margin-right: 16vw;
 }
 
 .card-login {
