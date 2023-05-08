@@ -203,6 +203,11 @@ nav a:hover {
     font-weight: 600;
 }
 
+.info-btn:hover {
+    background-color: #774f65;
+    transition: 0.6s;
+}
+
 .trailer-btn {
     /* background: #95637F; */
     display: inline-block;
