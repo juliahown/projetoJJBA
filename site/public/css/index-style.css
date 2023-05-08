@@ -338,3 +338,51 @@ nav a:hover {
     justify-content: flex-start;
     margin-right: 5vw;
 }
+
+/* ínicio da página sobre Personagens */
+
+.personagens {
+    background: url(../assets/imgs/wave-back2.png);
+    background-size: cover;
+}
+
+.charact-cnt {
+    margin-left: 10vw;
+    margin-top: 45vh;
+    margin-bottom: 20vh;
+    align-items: center;
+    color: #fff;
+}
+
+.charact-cnt h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+    line-height: 3vh;
+}
+
+.charact-cnt p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 4vh;
+    margin-bottom: 27px;
+}
+
+/* .charact-cnt p span {
+    color: #95637F;
+    font-weight: 600;
+} */
+
+.btn-maispersonagens {
+    background-color: #95637F;
+    font-size: 17px;
+    color: #fff;
+    padding: 1vh 2vw;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-maispersonagens:hover {
+    background-color: #774f65;
+    transition: 0.6s;
+}
