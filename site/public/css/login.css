@@ -5,3 +5,30 @@
     font-family: 'Poppins';
 }
 
+body {
+    background: url(../assets/imgs/login.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vh auto;
+}
+
+.container {
+    display: flex;
+    justify-content: right;
+    margin-top: 40vh;
+    margin-right: 15vw;
+}
+
+.card-login {
+    align-items: center;
+}
+
+.card-login h2 {
+    font-size: 70px;
+    color: #95637F;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.formulario {
+    justify-content: center;
+}
