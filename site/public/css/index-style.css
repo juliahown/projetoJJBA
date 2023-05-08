@@ -13,7 +13,7 @@
 
 ::-webkit-scrollbar-thumb {
     background: linear-gradient(#46485E,#95637F);
-    border-radius: 7px;
+    border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
