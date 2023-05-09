@@ -16,24 +16,84 @@ body {
     margin-left: 3vw;
 }
 
-.container {
+.main-login {
     display: flex;
-    justify-content: right;
-    margin-top: 24vh;
-    margin-right: 16vw;
-}
-
-.card-login {
-    align-items: center;
-}
-
-.card-login h2 {
-    font-size: 70px;
-    color: #95637F;
-    align-items: center;
-    text-transform: uppercase;
+    justify-content: flex-end;
+    margin-top: 13vh;
+    margin-right: 12vw;
 }
 
 .formulario {
+    align-items: center;
+}
+
+.formulario > h2 {
+    font-size: 70px;
+    color: #95637F;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-login {
+    display: flex;
     justify-content: center;
+    align-items: left;
+    flex-direction: column;
+    
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: rgb(243, 243, 243);
+}
+
+.textfield > label {
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: rgb(107, 107, 107);
+}
+
+.paragrafo {
+    font-size: 15px;
+}
+
+.paragrafo > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #95637F;
+}
+
+.btn-login {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: #95637F;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1px;
+}
+
+.btn-login:hover {
+    background-color: #46485E;
+    transition: 0.9s;
 }
