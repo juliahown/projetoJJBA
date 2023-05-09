@@ -12,7 +12,7 @@
     <script src="./js/funcoes.js"></script>
 
 
-    <link rel="icon" href="./assets/icon/favicon2.ico">
+    <link rel="icon" href="assets/logo.svg">
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -32,31 +32,55 @@
         </div>
         <div class="container">
             <div class="card card-cadastro">
-                <h2>Bem-vindo!</h2>
+                <h2>Cadastro</h2>
                 <div class="formulario">
 
-                    <!--
-                         Para inserir mais um campo, copie uma das inputs abaixo.
-                         Assim que inserir vá para o script abaixo.
-                     -->
+                    <div class="textfield">
+                        <label>Nome:</label>
+                        <input id="nome_input" type="text" placeholder="Digite seu nome">
+                    </div>
+                    <div class="textfield">
+                        <label>E-mail:</label>
+                        <input id="email_input" type="text" placeholder="Digite seu email">
+                    </div>
+                    <div class="textfield">
+                        <label>Senha:</label>
+                        <input id="senha_input" type="password" placeholder="Digite uma senha">
+                    </div>
+                    <div class="textfield">
+                        <label>Confirmar senha:</label>
+                        <input id="confirmacao_senha_input" type="password" placeholder="Confirmar senha">
+                    </div>
+                    <div class="textfield">
+                        <label>Protagonista favorito:</label>
+                        <input id="personagemfav_input" type="text" list="personagens" placeholder="Protagonista favorito">
 
-                    <div class="campo">
-                        <span>Nome:</span>
-                        <input id="nome_input" type="text" placeholder="Seu nome">
+                        <datalist id="personagens">
+                            <option value="Jonathan Joestar"></option>
+                            <option value="Joseph Joestar"></option>
+                            <option value="Jotaro Kujou"></option>
+                            <option value="Josuke Higashikata"></option>
+                            <option value="Giorno Giovanna"></option>
+                            <option value="Jolyne Kujou"></option>
+                        </datalist>
                     </div>
-                    <div class="campo">
-                        <span>E-mail:</span>
-                        <input id="email_input" type="text" placeholder="meuemail@provedor.com">
+                    <div class="textfield">
+                        <label>Temporada favorita:</label>
+                        <input id="temporadafav_input" type="text" list="temporadas" placeholder="Temporada favorita">
+                        
+                        <datalist id="temporadas">
+                            <option value="Phantom Blood"></option>
+                            <option value="Battle Tendency"></option>
+                            <option value="Stardust Crusaders"></option>
+                            <option value="Diamond is Ubreakable"></option>
+                            <option value="Golden Wind"></option>
+                            <option value="Stone Ocean"></option>
+                        </datalist>
                     </div>
-                    <div class="campo">
-                        <span>Senha:</span>
-                        <input id="senha_input" type="password" placeholder="******">
-                    </div>
-                    <div class="campo">
-                        <span>Confirmação da Senha:</span>
-                        <input id="confirmacao_senha_input" type="password" placeholder="******">
-                    </div>
-                    <button class="botao" onclick="cadastrar()">Cadastrar</button>
+
+                    <p class="paragrafo">Já possui uma conta? <a href="login.html">Fazer Login</a></p>
+
+                    <button class="btn-cadastrar" onclick="cadastrar()">Cadastrar</button>
 
                 </div>
                 <!-- <div id="div_aguardar" class="loading-div">
