@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background: url(../assets/imgs/cadastro.jpg);
+    background-repeat: no-repeat;
+    background-size: 100vh auto;
+    background-position: right;
+}
+
+.button {
+    margin-top: 4vh;
+    margin-left: 3vw;
+}
+
+.main-cadastro {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 3vh;
+    margin-left: 12vw;
+}
+
+.formulario {
+    align-items: center;
+}
+
+.formulario > h2 {
+    font-size: 45px;
+    color: #46485E;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.card-login {
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    flex-direction: column;  
+}
+
+.textfield {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    background-color: rgb(243, 243, 243);
+}
+
+.textfield > label {
+    margin-bottom: 8px;
+}
+
+.textfield > input::placeholder {
+    color: rgb(107, 107, 107);
+}
+
+.paragrafo {
+    font-size: 15px;
+}
+
+.paragrafo > a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #95637F;
+}
+
+.btn-cadastro {
+    width: 100%;
+    padding: 10px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2px;
+    background: #46485E;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1px;
+}
+
+.btn-cadastro:hover {
+    background-color:#643951;
+    transition: 0.9s;
+}
