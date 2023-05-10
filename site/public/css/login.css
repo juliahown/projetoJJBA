@@ -39,8 +39,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: left;
-    flex-direction: column;
-    
+    flex-direction: column;  
 }
 
 .textfield {
