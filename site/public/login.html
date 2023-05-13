@@ -20,15 +20,8 @@
 
 <body>
 
-    <!--Header-->
-
     <div class="button"><a href="index.html" class="btn-home"><img src="./assets/arrow.png"></a></div>
-
-    <div class="login">
-        <div class="alerta_erro">
-            <div class="card_erro" id="cardErro">
-                <span id="mensagem_erro"></span>
-            </div>
+ -->
         </div>
         <div class="main-login">
             <div class="formulario">
@@ -43,14 +36,8 @@
                         <input id="senha_input" type="password" placeholder="Digite a sua senha">
                     </div>
                     <p class="paragrafo">Ainda não possui uma conta? <a href="cadastro.html">Criar conta</a></p>
-                    <button class="btn-login" onclick="entrar()">Entrar</button>
+                    <button class="btn-login" onclick="entrar()">Fazer Login</button>
                 </div>
-
-                <!-- <div id="div_aguardar" class="loading-div">
-                    <img src="./assets/circle-loading.gif" id="loading-gif">
-                </div> -->
-
-                <div id="div_erros_login"></div>
             </div>
         </div>
     </div>
@@ -74,21 +61,21 @@
     function entrar() {
         aguardar();
 
-        var emailVar = email_input.value;
-        var senhaVar = senha_input.value;
+        var email = email_input.value;
+        var senha = senha_input.value;
 
-        if (emailVar == "" || senhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
+        if (email == "" || senha == "") {
+            // cardErro.style.display = "block"
+            swal ("Preencha os campos para fazer o login");
             finalizarAguardar();
             return false;
         }
         else {
-            setInterval(sumirMensagem, 5000)
+            setInterval('erro', 5000)
         }
 
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
+        console.log("FORM LOGIN: ", email);
+        console.log("FORM SENHA: ", senha);
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -96,8 +83,8 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                emailServer: emailVar,
-                senhaServer: senhaVar
+                emailServer: email,
+                senhaServer: senha
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -121,7 +108,7 @@
 
             } else {
 
-                console.log("Houve um erro ao tentar realizar o login!");
+                console.log("Houve um erro ao tentar realizar o login");
 
                 resposta.text().then(texto => {
                     console.error(texto);
@@ -136,8 +123,8 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
+    // function sumirMensagem() {
+    //     cardErro.style.display = "none"
+    // }
 
 </script>
