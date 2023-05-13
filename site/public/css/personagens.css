@@ -93,6 +93,16 @@ nav a:hover {
 
 /* INÍCIO DO CONTEÚDO DA PÁGINA */
 
+main h1 {
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'LEMON MILK';
+    font-size: 50px;
+    margin-top: 10vh;
+    margin-left: 35%;
+    margin-bottom: 10vh;
+}
+
 .container {
     position: relative;
     display: flex;
