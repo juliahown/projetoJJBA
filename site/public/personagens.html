@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,9 +18,10 @@
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
+
 <body>
-    
-        <!-- CONTEÚDO DA NAVIGATION (NAVBAR) -->
+
+    <!-- CONTEÚDO DA NAVIGATION (NAVBAR) -->
     <header>
         <div class="container">
             <nav>
@@ -28,7 +30,6 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="sobreanime.html">Anime</a></li>
                     <li><a href="quiz.html">Quiz</a></li>
-                    <li><a href="sobremim.html">Sobre nós</a></li>
                 </ul>
 
                 <div class="btn-user">
@@ -40,20 +41,95 @@
 
     <!-- CONTEÚDO DO SITE -->
     <main class="main" id="main-content">
-        <div class="content">
-            <div class="info" data-aos="fade-down">
+        <div class="container">
+            <!-- <div class="info" id="info" data-aos="fade-down">
                 <h1>Jonathan Joestar</h1>
                 <h3>ジョナサン・ジョースタ</h3>
-                <p class="description">Jonathan Joestar é o protagonista de Phantom Blood e o primeiro JoJo da série JoJo's Bizarre Adventure.
-                   Filho de George Joestar I, Jonathan é um homem honesto, gentil e positivo, cuja vida está repleta de tragédias após conhecer seu 
-                   irmão mais velho adotivo, Dio Brando. Em sua batalha contra Dio, Jonathan se torna um usuário do Hamon sob a tutela de Will Anthonio Zeppeli.</p>
+                <p class="description">Jonathan Joestar é o protagonista de Phantom Blood e o primeiro JoJo da série
+                    JoJo's Bizarre Adventure. <br>
+                    Poder: Hamon.</p>
+                    <img class="text" src="./assets/thumb/text01.png" alt="Jonathan Joestar">
+            </div> -->
+            <div class="card">
+                <div class="content">
+                    <h2>Jonathan Joestar</h2>
+                    <p>1ª Temporada Phantom Blood<br>
+                        Nacionalidade: Britânico<br>
+                        Usuário de Hamon</p>
+                </div>
+                <img src="./assets/imgs/jonathan.png">
             </div>
-            <div class="image">
-                <img class="" src="./assets/imgs/jonathan.png" alt="Jonathan Joestar">
+            <div class="card">
+                <div class="content">
+                    <h2>Joseph Joestar</h2>
+                    <p>2ª Temporada Battle Tendency<br>
+                        Nacionalidade: Britânico<br>
+                        Usuário de Stand<br>
+                        Nome do Stand: Hermit Purple</p>
+                </div>
+                <img src="./assets/imgs/joseph.png">
             </div>
+            <div class="card">
+                <div class="content">
+                    <h2>Jotaro Kujo</h2>
+                    <p>3ª Temporada Stardust Crusaders<br>
+                        Nacionalidade: Japonês<br>
+                        Usuário de Stand<br>
+                        Nome do Stand: Star Platinum</p>
+                </div>
+                <img src="./assets/imgs/jotaro.png">
+            </div>
+            <br>
+            <div class="card">
+                <div class="content">
+                    <h2>Josuke Higashikata </h2>
+                    <p>4ª Temporada Diamond is Unbreakable<br>
+                        Nacionalidade: Japonês<br>
+                        Usuário de Stand<br>
+                        Nome do Stand: Crazy Diamond</p>
+                </div>
+                <img src="./assets/imgs/josuke.png">
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>Giorno Giovanna</h2>
+                    <p>5ª Temporada Vento Aureo<br>
+                        Nacionalidade: Nipo-Britânico<br>
+                        Usuário de Stand<br>
+                        Nome do Stand: Gold Experience</p>
+                </div>
+                <img src="./assets/imgs/giorno.png">
+            </div>
+            <div class="card">
+                <div class="content">
+                    <h2>Jolyne Kujo</h2>
+                    <p>6ª Temporada Stone Ocean<br>
+                        Nacionalidade: Nipo-Americana<br>
+                        Usuária de Stand<br>
+                        Nome do Stand: Stone Free</p>
+                </div>
+                <img src="./assets/imgs/jolyne.png">
+            </div>
+            <!-- <ul class="thumb">
+                <li><img src="./assets/thumb/icon4.png" onclick="imgSlider('./assets/thumb/text01.png')"></li>
+                <li><img src="./assets/thumb/icon5.jpg" onclick="imgSlider('./assets/imgs/joseph.png')"></li>
+                <li><img src="./assets/thumb/icon2.jpg" onclick="imgSlider('./assets/imgs/jotaro.png')" ></li>
+                <li><img src="./assets/thumb/icon3.jpg" onclick="imgSlider('josuke.png')" alt="Josuke"></li>
+                <li><img src="./assets/thumb/icon1.jpg" onclick="imgSlider('giorno.png')" alt="Giorno"></li>
+                <li><img src="./assets/thumb/icon6.jpg" onclick="imgSlider('jolyne.png')" alt="Jolyne"></li>
+            </ul> -->
         </div>
     </main>
-    <!-- FIM DA LANDING -->
+    <!-- FIM DO CONTEÚDO -->
 
 </body>
+
 </html>
+
+<script>
+
+    function imgSlider(anything) {
+        document.querySelector('.character').src = anything;
+    }
+
+</script>
