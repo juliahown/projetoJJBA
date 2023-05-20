@@ -18,63 +18,63 @@
     <link rel="icon" href="assets/logo.svg">
     <link rel="stylesheet" href="./css/cadastro.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    
+
     <link
         href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
 <body>
-        </div>
-        <div class="main-cadastro">
-            <div class="formulario">
-                <h2>Criar Conta</h2>
-                <div class="card-cadastro">
+    <div class="button"><a href="index.html" class="btn-home"><img src="./assets/arrow-black.png"></a></div>
+    <div class="main-cadastro">
+        <div class="formulario">
+            <h2>Criar Conta</h2>
+            <div class="card-cadastro">
 
-                    <div class="textfield">
-                        <label>Nome:</label>
-                        <input id="nome_input" type="text" placeholder="Digite seu nome">
-                    </div>
-                    <div class="textfield">
-                        <label>E-mail:</label>
-                        <input id="email_input" type="text" placeholder="Digite seu email">
-                    </div>
-                    <div class="textfield">
-                        <label>Senha:</label>
-                        <input id="senha_input" type="password" placeholder="Digite uma senha">
-                    </div>
-                    <div class="textfield">
-                        <label>Protagonista favorito:</label>
-                        <select id="personagem_input">
-                            <option value="1">Jonathan Joestar</option>
-                            <option value="2">Joseph Joestar</option>
-                            <option value="3">Jotaro Kujou</option>
-                            <option value="4">Josuke Higashikata</option>
-                            <option value="5">Giorno Giovanna</option>
-                            <option value="6">Jolyne Kujou</option>
+                <div class="textfield">
+                    <label>Nome:</label>
+                    <input id="nome_input" type="text" placeholder="Digite seu nome">
+                </div>
+                <div class="textfield">
+                    <label>E-mail:</label>
+                    <input id="email_input" type="text" placeholder="Digite seu email">
+                </div>
+                <div class="textfield">
+                    <label>Senha:</label>
+                    <input id="senha_input" type="password" placeholder="Digite uma senha">
+                </div>
+                <div class="textfield">
+                    <label>Protagonista favorito:</label>
+                    <select id="personagem_input">
+                        <option value="1">Jonathan Joestar</option>
+                        <option value="2">Joseph Joestar</option>
+                        <option value="3">Jotaro Kujou</option>
+                        <option value="4">Josuke Higashikata</option>
+                        <option value="5">Giorno Giovanna</option>
+                        <option value="6">Jolyne Kujou</option>
+                    </select>
+                </div>
+                <div class="textfield">
+                    <label>Temporada favorita:</label>
+                    <div class="select">
+                        <select id="temporada_input">
+                            <option value="1">Phantom Blood</option>
+                            <option value="2">Battle Tendency</option>
+                            <option value="3">Stardust Crusaders</option>
+                            <option value="4">Diamond is Ubreakable</option>
+                            <option value="5">Golden Wind</option>
+                            <option value="6">Stone Ocean</option>
                         </select>
                     </div>
-                    <div class="textfield">
-                        <label>Temporada favorita:</label>
-                        <div class="select">
-                            <select id="temporada_input">
-                                <option value="1">Phantom Blood</option>
-                                <option value="2">Battle Tendency</option>
-                                <option value="3">Stardust Crusaders</option>
-                                <option value="4">Diamond is Ubreakable</option>
-                                <option value="5">Golden Wind</option>
-                                <option value="6">Stone Ocean</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <p class="paragrafo">Já possui uma conta? <a href="login.html">Fazer Login</a></p>
-
-                    <button class="btn-cadastro" onclick="cadastrar()">Cadastrar</button>
-
                 </div>
+
+                <p class="paragrafo">Já possui uma conta? <a href="login.html">Fazer Login</a></p>
+
+                <button class="btn-cadastro" onclick="cadastrar()">Cadastrar</button>
+
             </div>
         </div>
+    </div>
     </div>
 
     <!-- footer inicio-->
@@ -103,16 +103,16 @@
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || personagemVar == "" || temporadaVar == "") {
             // cardErro.style.display = "block"
-           swal ("Preencha os campos obrigatórios")
+            swal("Preencha os campos obrigatórios")
 
             // finalizarAguardar();
             return false;
         }
-        else if(emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1){
-            swal ("Ops", "O e-mail inserido é inválido. Por favor insira novamente.", "warning")
+        else if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+            swal("Ops", "O e-mail inserido é inválido. Por favor insira novamente.", "warning")
         }
-        else if(senhaVar.length < 8){
-            swal ("Ops", "A senha inserida é muito curta. Por favor insira novamente.", "warning")
+        else if (senhaVar.length < 8) {
+            swal("Ops", "A senha inserida é muito curta. Por favor insira novamente.", "warning")
         }
         // else {
         //     setInterval(sumirMensagem, 5000)
