@@ -59,23 +59,23 @@
 
 
     function entrar() {
-        aguardar();
+        // aguardar();
 
-        var email = email_input.value;
-        var senha = senha_input.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
 
-        if (email == "" || senha == "") {
+        if (emailVar == "" || senhaVar == "") {
             // cardErro.style.display = "block"
             swal ("Preencha os campos para fazer o login");
-            finalizarAguardar();
+            // finalizarAguardar();
             return false;
         }
-        else {
-            setInterval('erro', 5000)
-        }
+        // else {
+        //     setInterval('erro', 5000)
+        // }
 
-        console.log("FORM LOGIN: ", email);
-        console.log("FORM SENHA: ", senha);
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -83,8 +83,8 @@
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                emailServer: email,
-                senhaServer: senha
+                emailServer: emailVar,
+                senhaServer: senhaVar
             })
         }).then(function (resposta) {
             console.log("ESTOU NO THEN DO entrar()!")
@@ -101,7 +101,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/cards.html";
+                        window.location = "quiz.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
