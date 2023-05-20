@@ -64,7 +64,7 @@
 
         if (emailVar == "" || senhaVar == "") {
             // cardErro.style.display = "block"
-            swal ("Preencha os campos para fazer o login");
+            swal ("Ops" , "Preencha os campos para fazer o login",  "error");
             // finalizarAguardar();
             return false;
         }
@@ -106,7 +106,7 @@
 
             } else {
 
-                console.log("Houve um erro ao tentar realizar o login");
+                swal ("Ops",  "Email e/ou senha incorreto(s)" ,  "error");
 
                 resposta.text().then(texto => {
                     console.error(texto);
@@ -120,9 +120,5 @@
 
         return false;
     }
-
-    // function sumirMensagem() {
-    //     cardErro.style.display = "none"
-    // }
 
 </script>
