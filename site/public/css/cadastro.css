@@ -97,3 +97,23 @@ body {
     background-color:#643951;
     transition: 0.9s;
 }
+
+select {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+select .seasons {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    background-color: rgb(243, 243, 243);
+}
+
+select > label {
+    margin-bottom: 8px;
+}
