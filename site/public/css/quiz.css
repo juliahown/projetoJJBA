@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* NAVIGATION BAR STYLE */
+
+.logo {
+    display: flex;
+    align-items: center;
+    color: #000;
+    height: 0px;
+    font-size: 23px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    font-weight: bold;
+    margin: 0vw;
+    width: 100%;
+    padding: 6vh 9vw 6vh 10vw;
+    transition: 0.6s ease-in;
+    z-index: 5;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 18px;
+    display: inline-block;
+    padding: 18px 25px;
+    color: #95637F;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000;
+    border-bottom: 2px solid transparent;
+    transition: .4s;
+}
+
+nav a:hover {
+    color: #95637F;
+    transition: .3s;
+}
+
+/* ESTILIZAÇÃO DO QUIZ  */
+
+.container {
+    display: flex;
+}
