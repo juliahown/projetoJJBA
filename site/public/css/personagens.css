@@ -65,15 +65,16 @@ nav a:hover {
     transition: .3s;
 }
 
-/* * New user Login and Sign Up buttons  */ */
+/* * New user Login and Sign Up buttons  */ 
 
 .btn-user {
     display: flex;
-    justify-content: right;
+    justify-content: space-between;
     gap: 1vw;
 }
 
 .btn-login {
+    background-color: #000;
     color: white;
     font-size: 16px;
     padding: 1vh 2vw;
@@ -83,6 +84,7 @@ nav a:hover {
 }
 
 .btn-signup {
+    background-color: #000;
     color: white;
     font-size: 16px;
     padding: 1vh 1vw;
