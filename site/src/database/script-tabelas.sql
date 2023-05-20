@@ -6,30 +6,40 @@
 comandos para mysql - banco local - ambiente de desenvolvimento
 */
 
-CREATE DATABASE aquatech;
+CREATE DATABASE ProjectJJBA;
 
-USE aquatech;
+USE ProjectJJBA;
 
-CREATE TABLE usuario (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	nome VARCHAR(50),
-	email VARCHAR(50),
-	senha VARCHAR(50)
+CREATE TABLE Personagem (
+idPersonagem INT PRIMARY KEY auto_increment,
+Nome VARCHAR(50) NOT NULL
 );
 
-CREATE TABLE aviso (
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	titulo VARCHAR(100),
-	descricao VARCHAR(150),
-	fk_usuario INT,
-	FOREIGN KEY (fk_usuario) REFERENCES usuario(id)
+CREATE TABLE Temporada (
+idTemporada INT PRIMARY KEY auto_increment,
+Nome VARCHAR(100) NOT NULL
 );
 
-create table aquario (
-/* em nossa regra de negócio, um aquario tem apenas um sensor */
-	id INT PRIMARY KEY AUTO_INCREMENT,
-	descricao VARCHAR(300)
+CREATE TABLE Usuario (
+idUsuario INT PRIMARY KEY auto_increment,
+Nome VARCHAR(50) NOT NULL,
+Email VARCHAR(100) UNIQUE NOT NULL,
+Senha CHAR(100) NOT NULL,
+fkPersonagem INT,
+FOREIGN KEY (fkPersonagem)
+	REFERENCES Personagem(idPersonagem),
+fkTemporada INT,
+FOREIGN KEY (fkTemporada)
+	REFERENCES Temporada(idTemporada)
 );
+
+CREATE TABLE Pontuacao (
+idPontuacao INT PRIMARY KEY auto_increment,
+fkUsuario INT,
+FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario),
+Pontuacao INT,
+PercentualPontos FLOAT
+) auto_increment = 100;
 
 /* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
 
@@ -44,7 +54,6 @@ create table medida (
 	fk_aquario INT,
 	FOREIGN KEY (fk_aquario) REFERENCES aquario(id)
 );
-
 
 /*
 comando para sql server - banco remoto - ambiente de produção
