@@ -392,3 +392,15 @@ nav a:hover {
     background-color: #774f65;
     transition: 0.6s;
 }
+
+/* FOOTER  */
+
+footer {
+    justify-content: center;
+}
+
+footer p {
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
