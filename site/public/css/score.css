@@ -1,6 +1,44 @@
+:root {
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+}
+
+
 * {
     margin: 0;
     padding: 0;
+    outline: 0;
+    appearance: none;
+    border: 0;
+    text-decoration: 0;
+    list-style: none;
     box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
     font-family: 'Poppins';
+    font-size: 20px;
+    background-color: #f6f6f9;
+    user-select: none;
+    overflow-x: hidden;
+}
+
+a {
+    color: #000;
+}
+
+.logo h1 {
+    font-weight: 800;
+    font-size: 18rem;
 }
