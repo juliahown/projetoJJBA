@@ -1,180 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
 
-    <title>Quiz</title>
-
-    <script src="./js/funcoes.js"></script>
-
-    <link rel="icon" href="assets/logo.svg">
-    <link rel="stylesheet" href="./css/quiz.css">
-    <link rel="stylesheet" href="./css/theme.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <link rel="stylesheet" href="./css/style-quiz.css">
 </head>
 <body>
 
-    <section>
-        <header>
-            <!-- <div class="container">
-                <div class="bem-vindo">
-                    <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-                </div> -->
-                <nav>
-                    <h1 class="logo">JJBA PROJECT</h1>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="sobreanime.html">Anime</a></li>
-                        <li><a href="personagens.html">Personagens</a></li>
-                    </ul>
-                    <div class="btn-right">
-                        <a href="score.html" class="btn-login">Score</a>
-                        <a href="login.html" class="active">SAIR</a>
-                    </div>
-                </nav>
-        </header>
-        <div class="container">
-            <div class="content">
-                <h1>Quiz sobre JoJo's</h1>
-            <div class="pergunta">
-                <h3>De qual JoJo Dio brando roubou o corpo para retornar a vida?</h3>
-                <div class="alternativas">
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Jonathan Joestar">
-                        <p>A. Jonathan Joestar</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Joseph Joestar">
-                        <p>B. Joseph Joestar</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Jotaro Kujo">
-                        <p>C. Jotaro Kujo</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Josuke Higashikata">
-                        <p>D. Josuke Higashikata</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pergunta">
-                <h3>Qual o nome do stand de Yoshikage Kira, vilão da parte 4 Diamond is Unbreakable?</h3>
-                <div class="alternativas">
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Hierophant Green">
-                        <p>A. Hierophant Green</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Silver Chariot">
-                        <p>B. Silver Chariot</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Killer Queen">
-                        <p>C. Killer Queen</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="King Crimson">
-                        <p>D. King Crimson</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pergunta">
-                <h3>Quem é o vilão de JoJo Bizarre Adventure: Vento Aureo?</h3>
-                <div class="alternativas">
-                    <div class="opções">
-                        <input type="radio" name="opções" value="ACDC">
-                        <p>A. ACDC</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Pucci">
-                        <p>B. Pucci</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Dio Brando">
-                        <p>C. Dio Brando</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Diavolo">
-                        <p>D. Diavolo</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pergunta">
-                <h3>Qual o poder do Made in Heaven?</h3>
-                <div class="alternativas">
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Restaurar e curar">
-                        <p>A. Poder de restaurar objetos quebrados e curar feridas de qualquer ser vivo.</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Parar o tempo">
-                        <p>B. Parar o tempo em um determinado intervalo de tempo.</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Acelerar o tempo">
-                        <p>C. Acelerar drasticamente o fluxo do tempo sem afetar o nosso relógio biológico.</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Transformar objetos em seres vivos">
-                        <p>D. Transformar objetos inertes em seres vivos, sejam de origem vegetal ou animal.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pergunta">
-                <h3>Como se consegue um stand?</h3>
-                <div class="alternativas">
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Nascendo com um ou sendo atingido por uma flecha de stand">
-                        <p>A. Nascendo com um ou sendo atingido por uma flecha de stand.</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Roubando o stand de algum usuário">
-                        <p>B. Roubando o stand de algum usuário.</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Beber o sangue vampiro de Dio Brando">
-                        <p>C. Beber o sangue vampiro de Dio Brando.</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="Encontrar a flecha de stand e fazer um pacto com ela">
-                        <p>D. Encontrar a flecha de stand e fazer um pacto com ela.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="pergunta">
-                <h3>No total, existem quantas partes de JoJo?</h3>
-                <div class="alternativas">
-                    <div class="opções">
-                        <input type="radio" name="opções" value="9">
-                        <p>A. 9</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="8">
-                        <p>B. 8</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="7">
-                        <p>C. 7</p>
-                    </div>
-                    <div class="opções">
-                        <input type="radio" name="opções" value="6">
-                        <p>D. 6</p>
-                    </div>
-                </div>
-                <a href="score.html">Finalizar quiz</a>
-            </div>
-            </div>
-        </div>
-
-    </section>
+  <h2>Quiz sobre JoJo's</h2>
+  <main>
+    <div class="content">
+      <span class="questionQtd"></span>
+      <span class="question"></span>
+      <div class="answers"></div>
+    </div>
+    <div class="finish">
+      <span></span>
+      <button>Finalizar</button>
+    </div>
+  </main>
+  
+  <script src="./js/script-quiz.js" type="module"></script>
 </body>
 </html>
-
-<script>
-    b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-</script>
