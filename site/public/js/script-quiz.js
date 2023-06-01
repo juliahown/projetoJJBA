@@ -10,19 +10,19 @@ import questions from "./questions.js";
 
 let questaoAtual = 0;
 let questoesAcertos = 0;
+let pontuação = 0;
 
 btnFinalizar.onclick = () => {
-  // content.style.display = "flex";
-  // contentFinish.style.display = "none";
 
   setTimeout(function () {
     window.location = "score.html";
-}, 0);
+  }, 0);
 };
 
 function ProximaQuestao(e) {
   if (e.target.getAttribute("data-correct") === "true") {
     questoesAcertos++;
+    pontuação += 100;
   }
 
   if (questaoAtual < questions.length - 1) {
@@ -34,7 +34,7 @@ function ProximaQuestao(e) {
 }
 
 function finish() {
-  textFinish.innerHTML = `Você acertou ${questoesAcertos} de ${questions.length}`;
+  textFinish.innerHTML = `Você acertou ${questoesAcertos} de ${questions.length} <br> Pontuação total: ${pontuação}`;
   content.style.display = "none";
   contentFinish.style.display = "flex";
 }
@@ -55,11 +55,13 @@ function CarregarQuestao() {
     `;
 
     answers.appendChild(div);
+
   });
 
   document.querySelectorAll(".answer").forEach((item) => {
     item.addEventListener("click", ProximaQuestao);
   });
+
 }
 
 CarregarQuestao();
