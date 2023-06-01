@@ -20,6 +20,20 @@ body {
     background-repeat: none;
 }
 
+::-webkit-scrollbar {
+    background-color: #000;
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#46485E,#95637F);
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#95637F,#946cc2);
+}
+
 /* ínicio da Header */
 
 .logo {
