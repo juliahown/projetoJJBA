@@ -49,6 +49,8 @@ main {
     color: #fff;
     height: 0px;
     font-size: 23px;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #000;
 }
 
 nav {
@@ -71,7 +73,9 @@ nav ul li {
     font-size: 18px;
     display: inline-block;
     padding: 18px 25px;
-    color: #95637F;
+    color: #cab1bf;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #000;
 }
 
 nav ul li a {
@@ -82,7 +86,7 @@ nav ul li a {
 }
 
 nav a:hover {
-    color: #95637F;
+    color: #9f728b;
     transition: .3s;
 }
 
@@ -178,13 +182,17 @@ nav a:hover {
     font-weight: 800;
     line-height: 9vh;
     margin-bottom: 11px;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #000;
 }
 
 .content .info .description {
-    font-size: 18px;
     font-weight: 400;
     line-height: 3.5vh;
     margin-bottom: 10px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #000;
 }
 
 .land-btns {
@@ -317,14 +325,20 @@ nav a:hover {
     line-height: 7vh;
     text-transform: uppercase;
     margin-bottom: 20px;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #313241;
 }
 
 .obra-content .obra-info h3 span {
     color: #95637F;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #313241;
 }
 
 .obra-content .obra-info .paragraph {
-    font-size: 16px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #000;
 }
 
 .btn-moreanime {
@@ -364,13 +378,17 @@ nav a:hover {
     font-size: 60px;
     text-transform: uppercase;
     line-height: 3vh;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #313241;
 }
 
 .charact-cnt p {
-    font-size: 18px;
     font-weight: 600;
     line-height: 4vh;
     margin-bottom: 27px;
+    font-size: 1.1rem;
+    text-shadow: 1px 1px 1px #000, 
+    2px 2px 3px #000;
 }
 
 /* .charact-cnt p span {
