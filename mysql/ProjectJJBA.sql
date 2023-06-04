@@ -53,8 +53,7 @@ CREATE TABLE Pontuacao (
 idPontuacao INT PRIMARY KEY auto_increment,
 fkUsuario INT,
 FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario),
-Pontuacao INT,
-PercentualPontos FLOAT
+TotalPontuacao INT
 ) auto_increment = 100;
 
 -- DROP TABLE Pontuacao;
@@ -70,8 +69,11 @@ SELECT * FROM Usuario WHERE fkTemporada = 3;
 SELECT COUNT(fkPersonagem) AS PersonagemFav FROM Usuario GROUP BY fkPersonagem;
 SELECT COUNT(fkTemporada) AS TemporadaFav FROM Usuario GROUP BY fkTemporada;
 
+-- SELECT PARA VER A QUANTIDADE DE USUARIOS CADASTRADOS
+SELECT COUNT(idusuario) AS NumeroUsuarios FROM Usuario;
+
 -- SELECT PARA O GRÁFICO DE PERSONAGEM
-SELECT COUNT(fkPersonagem) AS qtdEscolhido, Personagem.Nome FROM Usuario JOIN Personagem ON fkPersonagem = idPersonagem GROUP BY fkPersonagem;
+SELECT COUNT(fkPersonagem) AS qtdEscolhido, Personagem.Nome AS NomePersonagem FROM Usuario JOIN Personagem ON fkPersonagem = idPersonagem GROUP BY fkPersonagem;
 
 -- SELECT PARA O GRÁFICO DE TEMPORADA
-SELECT COUNT(fkTemporada) AS qtdEscolhido, Temporada.Nome FROM Usuario JOIN Temporada ON fkTemporada = idTemporada GROUP BY fkTemporada;
+SELECT COUNT(fkTemporada) AS qtdEscolhido, Temporada.Nome AS NomeTemporada FROM Usuario JOIN Temporada ON fkTemporada = idTemporada GROUP BY fkTemporada;
