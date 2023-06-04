@@ -1,0 +1,178 @@
+:root {
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+/* .container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Poppins';
+    font-size: 20px;
+    user-select: none;
+    overflow-x: hidden;
+} */
+
+nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, blue, 0.2);
+    text-decoration: none;
+}
+
+/* nav > h1 {
+    margin-top: 10vh;
+    margin-left: 3vw;
+    font-weight: 800;
+    font-size: 22px;
+    font-family: 'Poppins';
+    margin-bottom: 10vh;
+    color: #95637F;
+
+} */
+
+.logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin-top: 3vh;
+}
+
+.logo img {
+    width: 69px;
+}
+
+.logo span {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #95637F;
+}
+
+a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 200px;
+    padding: 10px;
+    top: 5px;
+    margin-left: 10px;
+}
+
+span {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    /* top: 14px; */
+    font-size: 28px;
+     text-align: center;
+}
+
+a:hover {
+    background: #eee;
+
+}
+
+nav:hover {
+    width: 200px;
+    transition: all 0.5s ease;
+
+}
+
+ul {
+    margin-top: 20vh;
+}
+
+.telagraph {
+    display: flex;
+    justify-content: center;
+    margin-top: 9vh;
+}
+
+.graph1 {
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin-left: 10vw;
+    background-color: #fff;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.graph1 h1 {
+    padding: 10px 10px;
+    margin-bottom: 3vh;
+}
+
+.graph2 h1 {
+    padding: 10px 10px;
+    margin-bottom: 3vh;
+}
+
+.graph2 {
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin-left: 10vw;
+    background-color: #fff;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.analytics {
+    position: relative;
+    margin-top: 10vh;
+    margin-left: 8vw;
+}
+
+.analytics span {
+    font-weight: 600;
+    margin-left: 10vw;
+    font-size: 30px;
+    color: #95637F;
+    text-shadow: 1px 1px 1px #fff, 
+               3px 3px 5px #beb6b6;
+}
+
+.boasVindas {
+    margin-left: 17vw;
+    margin-top: 10vh;
+}
+
+.boasVindas span {
+    margin-top: 15vh;
+    font-size: 22px;
+    color: #000;
+    font-weight: 700;
+}
