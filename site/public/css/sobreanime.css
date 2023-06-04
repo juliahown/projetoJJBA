@@ -13,12 +13,12 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(#46485E,#95637F);
+    background: linear-gradient(#46485E, #95637F);
     border-radius: 8px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(#95637F,#946cc2);
+    background: linear-gradient(#95637F, #946cc2);
 }
 
 body {
@@ -38,7 +38,7 @@ main {
     background-size: cover;
     background-repeat: none;
     background-position: center;
-} 
+}
 
 /* NAVIGATION BAR */
 
@@ -63,6 +63,8 @@ nav {
     padding: 6vh 11vw 6vh 10vw;
     transition: 0.6s ease-in;
     z-index: 5;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241
 }
 
 nav ul li {
@@ -92,7 +94,12 @@ nav a:hover {
 }
 
 .btn-login {
-    background-color: #000;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.55);
     color: white;
     font-size: 16px;
     padding: 1vh 2vw;
@@ -101,14 +108,33 @@ nav a:hover {
     font-weight: 600;
 }
 
+.btn-login:hover {
+    color: #90919e;
+    background: #313241;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: .3s;
+}
+
 .btn-signup {
-    background-color: #000;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.55);
     color: white;
     font-size: 16px;
     padding: 1vh 1vw;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 600;
+}
+
+.btn-signup:hover {
+    color: #90919e;
+    background: #313241;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    transition: .3s;
 }
 
 /* CONTEÚDO DA PÁGINA */
@@ -128,13 +154,17 @@ nav a:hover {
 
 .content .info h1 {
     font-size: 38px;
-    margin-bottom: 2vh;
+    margin-bottom: 4vh;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241;
 }
 
 .content .info span {
     font-weight: 600;
     font-size: 20px;
     color: #d696ba;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241;
 }
 
 img {
@@ -148,28 +178,76 @@ img {
     align-items: center;
     line-height: 3.3vh;
     margin-top: 6vh;
+    background-color: #000;
+    padding: 3vh 4vw;
 }
 
 .content-autor .info-autor {
     margin-right: 7vw;
     align-items: left;
     color: white;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241
 }
 
-.content-autor .info-autor h1{
+.content-autor .info-autor h1 {
     font-size: 48px;
     margin-bottom: 4vh;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241;
 }
 
-.content-autor .info-autor h3{
+.content-autor .info-autor h3 {
     margin-bottom: 2vh;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241;
 }
-
 
 .hirohiko {
     height: 300px;
     border-radius: 100%;
     margin-left: 7vw;
+}
+
+/* CONTEÚDO SOBRE AS TEMPORADAS */
+
+main {
+    color: #fff;
+    margin-top: 15vh;
+}
+
+main h1 {
+    font-size: 50px;
+    margin-left: 5vw;
+    margin-bottom: 4vh;
+}
+
+.conteudo {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    margin-left: 4vw;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.season img {
+    height: 450px;
+    align-self: center;
+    width: auto;
+}
+
+.season h2 {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    margin-right: 3.5vw;
+}
+
+/* .container {
+    display: flex;
+    line-height: 3.3vh;
+    margin-top: 13vh;
 }
 
 .content-curiosidade {
@@ -182,11 +260,15 @@ img {
     margin-left: 5vw;
     align-items: left;
     color: white;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241;
 }
 
 .content-curiosidade .info-curiosidade h1 {
     font-size: 38px;
     margin-bottom: 2vh;
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241;
 }
 
 .content-curiosidade .info-curiosidade ul {
@@ -194,4 +276,6 @@ img {
     line-height: 4vh;
     margin-bottom: 2vh;
     list-style: none;
-}
+    text-shadow: 1px 1px 1px #000,
+        2px 2px 3px #313241;
+} */
