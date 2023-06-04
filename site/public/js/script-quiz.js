@@ -14,11 +14,35 @@ let questoesAcertos = 0;
 let pontuação = 0;
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  startQuiz();
+        });
+
+        function startQuiz() {
+            let tempoRestante = 30;
+            document.getElementById('timer').innerHTML = tempoRestante;
+
+            for (let i = tempoRestante; i >= 0; i--) {
+                setTimeout(function() {
+                    document.getElementById('timer').innerHTML = i;
+                    if (i === 0) {
+                        finishQuiz();
+                    }
+                }, (tempoRestante - i) * 1000);
+            }
+        }
+
+function finishQuiz() {
+  textFinish.innerHTML = `Tempo esgotado! <br> Você acertou ${questoesAcertos} de ${questions.length} <br> Pontuação total: ${pontuação}`;
+  content.style.display = "none";
+  contentFinish.style.display = "flex";
+}
+
 btnFinalizar.onclick = () => {
 
   setTimeout(function () {
-    window.location = "dashboard.html";
-  }, 0);
+    window.location = "./dashboard/dashboard.html";
+  }, 1000);
 };
 
 function ProximaQuestao(e) {
@@ -39,6 +63,7 @@ function ProximaQuestao(e) {
 }
 
 function finish() {
+
   textFinish.innerHTML = `Você acertou ${questoesAcertos} de ${questions.length} <br> Pontuação total: ${pontuação}`;
   content.style.display = "none";
   contentFinish.style.display = "flex";
