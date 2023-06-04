@@ -8,14 +8,16 @@ const btnFinalizar = document.querySelector(".finish button");
 
 import questions from "./questions.js";
 
+let respostasUsuario = [];
 let questaoAtual = 0;
 let questoesAcertos = 0;
 let pontuação = 0;
 
+
 btnFinalizar.onclick = () => {
 
   setTimeout(function () {
-    window.location = "score.html";
+    window.location = "dashboard.html";
   }, 0);
 };
 
@@ -23,13 +25,16 @@ function ProximaQuestao(e) {
   if (e.target.getAttribute("data-correct") === "true") {
     questoesAcertos++;
     pontuação += 100;
+    alert("Reposta correta!")
+  } else {
+    alert("Puts, resposta incorreta")
   }
 
   if (questaoAtual < questions.length - 1) {
     questaoAtual++;
     CarregarQuestao();
   } else {
-    finish();
+    finish()
   }
 }
 
@@ -37,6 +42,7 @@ function finish() {
   textFinish.innerHTML = `Você acertou ${questoesAcertos} de ${questions.length} <br> Pontuação total: ${pontuação}`;
   content.style.display = "none";
   contentFinish.style.display = "flex";
+  
 }
 
 function CarregarQuestao() {
@@ -55,6 +61,8 @@ function CarregarQuestao() {
     `;
 
     answers.appendChild(div);
+
+    respostasUsuario.push(answer);
 
   });
 
