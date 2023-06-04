@@ -75,7 +75,7 @@ nav ul li {
     padding: 18px 25px;
     color: #cab1bf;
     text-shadow: 1px 1px 1px #000, 
-    2px 2px 3px #000;
+    2px 2px 3px #313241;
 }
 
 nav ul li a {
@@ -88,51 +88,6 @@ nav ul li a {
 nav a:hover {
     color: #9f728b;
     transition: .3s;
-}
-
-.search-box {
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    align-items: center;
-    top: 9.5%;
-    left: 70%;
-    background: black;
-    height: 40px;
-    padding: 10px;
-    border-radius: 40px;
-}
-
-.search-txt {
-    background: none;
-    border: none;
-    outline: none;
-    padding: 0;
-    color: white;
-    font-size: 13px;
-    line-height: 40px;
-    width: 0;
-    transition: .4s;
-}
-
-.search-btn {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: .4s;
-}
-
-.search-box:hover > .search-txt {
-    width: 200px;
-    padding: 0 6px;
-}
-
-.search-box:hover > .search-btn {
-    background: #653FB4;
 }
 
 /* New user Login and Sign Up buttons  */
@@ -229,7 +184,7 @@ nav a:hover {
     font-weight: 600;
 }
 
-/* Slideshow photos */
+/* Carousel settings */
 
 .wrapper {
     margin-top: 6vh;
@@ -338,7 +293,7 @@ nav a:hover {
 .obra-content .obra-info .paragraph {
     font-size: 1.1rem;
     text-shadow: 1px 1px 1px #000, 
-    2px 2px 3px #000;
+    2px 2px 3px #313241;
 }
 
 .btn-moreanime {
@@ -388,7 +343,7 @@ nav a:hover {
     margin-bottom: 27px;
     font-size: 1.1rem;
     text-shadow: 1px 1px 1px #000, 
-    2px 2px 3px #000;
+    2px 2px 3px #313241;
 }
 
 /* .charact-cnt p span {
@@ -419,6 +374,7 @@ footer {
 
 footer p {
     color: #fff;
-    font-size: 30px;
-    text-transform: uppercase;
+    font-size: 20px;
+    padding: 20px 20px;
+    text-align: center
 }
