@@ -8,7 +8,7 @@ const btnFinalizar = document.querySelector(".finish button");
 
 import questions from "./questions.js";
 
-let respostasUsuario = [];
+let respostasUsuario = []
 let questaoAtual = 0;
 let questoesAcertos = 0;
 let pontuação = 0;
@@ -33,14 +33,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
 function finishQuiz() {
-  textFinish.innerHTML = `Tempo esgotado! <br> Você acertou ${questoesAcertos} de ${questions.length} <br> Pontuação total: ${pontuação}`;
-  content.style.display = "none";
-  contentFinish.style.display = "flex";
+    textFinish.innerHTML = `<b>Tempo esgotado!</b> <br> Você acertou <b>${questoesAcertos}</b> de ${questions.length} <br> Pontuação total: <b>${pontuação}</b>`;
+    content.style.display = "none";
+    contentFinish.style.display = "flex";
 }
 
 btnFinalizar.onclick = () => {
 
-  setTimeout(function () {
+    setTimeout(function () {
     window.location = "./dashboard/dashboard.html";
   }, 1000);
 };
@@ -64,19 +64,19 @@ function ProximaQuestao(e) {
 
 function finish() {
 
-  textFinish.innerHTML = `Você acertou ${questoesAcertos} de ${questions.length} <br> Pontuação total: ${pontuação}`;
-  content.style.display = "none";
-  contentFinish.style.display = "flex";
+    textFinish.innerHTML = `Você acertou <b>${questoesAcertos}</b> de ${questions.length} <br> Pontuação total: <b>${pontuação}</b>`;
+    content.style.display = "none";
+    contentFinish.style.display = "flex";
   
 }
 
 function CarregarQuestao() {
-  questionQtd.innerHTML = `${questaoAtual + 1}/${questions.length}`;
-  const item = questions[questaoAtual];
-  answers.innerHTML = "";
-  question.innerHTML = item.question;
+    questionQtd.innerHTML = `${questaoAtual + 1}/${questions.length}`;
+    const item = questions[questaoAtual];
+    answers.innerHTML = "";
+    question.innerHTML = item.question;
 
-  item.answers.forEach((answer) => {
+    item.answers.forEach((answer) => {
     const div = document.createElement("div");
 
     div.innerHTML = `
