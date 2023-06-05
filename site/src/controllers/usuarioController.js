@@ -101,33 +101,30 @@ function cadastrar(req, res) {
 }
 
 function qtdUsuarios(req, res) {
-    usuarioModel.qtdUsuarios()
+    usuarioModel.quantidade_usuarios()
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
             } else {
-                res.status(204).send("Nenhum resultado foi encontrado!")
+                res.status(204).send("Nenhum resultado encontrado!")
             }
         }).catch(
             function (erro) {
                 console.log(erro);
-                console.log("Houve um erro ao realizar a consulta dos usuários! Erro: ", erro.sqlMessage);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
                 res.status(500).json(erro.sqlMessage);
             }
         );
 }
 
 function Pontuacao(req, res) {
-    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var idUsuario = req.body.idUsuarioServer;
     var pontuação = req.body.pontuaçãoServer;
 
-    // Faça as validações dos valores
     if (pontuação == undefined) {
         res.status(400).send("Sua pontuação está undefined!");
     } else {
         
-        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
         usuarioModel.Pontuacao(idUsuario, pontuação)
             .then(
                 function (resultado) {
