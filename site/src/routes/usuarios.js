@@ -20,4 +20,12 @@ router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
 
+router.post("/Pontuacao", function (req, res) {
+    usuarioController.Pontuacao(req, res);
+})
+
+router.get("/qtdUsuarios", function (req, res) {
+    usuarioController.qtdUsuarios(req, res);
+});
+
 module.exports = router;
