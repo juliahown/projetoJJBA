@@ -40,15 +40,6 @@
         </div>
     </div>
 
-    <!--footer inicio-->
-    <!-- <div class="footer">
-        <div class="container">
-            <h4>Feito com amor por aluno &hearts; SPTech &copy; 2023</h4>
-            <span class="version">v1.0.0</span>
-        </div>
-    </div> -->
-    <!--footer fim-->
-
 </body>
 
 </html>
@@ -57,20 +48,14 @@
 
 
     function entrar() {
-        // aguardar();
 
         var emailVar = email_input.value;
         var senhaVar = senha_input.value;
 
         if (emailVar == "" || senhaVar == "") {
-            // cardErro.style.display = "block"
             swal ("Ops" , "Preencha os campos para fazer o login",  "error");
-            // finalizarAguardar();
             return false;
         }
-        // else {
-        //     setInterval('erro', 5000)
-        // }
 
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
@@ -94,9 +79,9 @@
                     console.log(json);
                     console.log(JSON.stringify(json));
 
-                    sessionStorage.EMAIL_USUARIO = json.email;
-                    sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    sessionStorage.EMAIL_USUARIO = json.Email;
+                    sessionStorage.NOME_USUARIO = json.Nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
                         window.location = "quiz.html";
@@ -110,7 +95,6 @@
 
                 resposta.text().then(texto => {
                     console.error(texto);
-                    finalizarAguardar(texto);
                 });
             }
 
