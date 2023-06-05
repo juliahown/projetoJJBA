@@ -50,6 +50,13 @@
                         Nacionalidade: Britânico<br>
                         Usuário de Hamon</p>
                 </div>
+                <div class="heart-btn">
+                    <div class="btn-content">
+                        <span class="heart"></span>
+                        <span class="like">Like</span>
+                        <span class="numb">12</span>
+                    </div>
+                </div>
                 <img src="./assets/imgs/jonathan.png">
             </div>
             <div class="card">
@@ -105,7 +112,34 @@
             </div>
         </div>
     </main>
+
+    <button id="scrollUpButton" onclick="scrollToTop()">&#8679;</button>
+
     <!-- FIM DO CONTEÚDO -->
 
+    <footer>
+        <p>&copy; 2023 Project JJBA. Todos os direitos reservados. <br> Projeto realizado por Julia Hown</p>
+    </footer>
+
 </body>
+
 </html>
+
+<script>
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Mostra ou esconde o botão dependendo da posição do scroll
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById('scrollUpButton').style.display = 'block';
+        } else {
+            document.getElementById('scrollUpButton').style.display = 'none';
+        }
+    };
+</script>

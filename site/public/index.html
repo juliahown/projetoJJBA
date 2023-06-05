@@ -101,8 +101,10 @@
         </div>
     </section>
 
+    <button id="scrollUpButton" onclick="scrollToTop()">&#8679;</button>
+
     <footer>
-        <p>Projeto realizado por Julia Hown - 2023</p>
+        <p>&copy; 2023 Project JJBA. Todos os direitos reservados. <br> Projeto realizado por Julia Hown</p>
     </footer>
 </body>
 
@@ -110,4 +112,20 @@
 
 <script>
     AOS.init();
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    // Mostra ou esconde o botão dependendo da posição do scroll
+    window.onscroll = function() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById('scrollUpButton').style.display = 'block';
+      } else {
+        document.getElementById('scrollUpButton').style.display = 'none';
+      }
+    };
 </script>

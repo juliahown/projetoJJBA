@@ -111,24 +111,29 @@
         </div>
     </main>
 
-    <!-- <section>
-        <div class="content-curiosidade">
-            <div class="info-curiosidade">
-                <h1>Curiosidades sobre JoJo's</h1>
-                <p>Em JoJo's Bizarre Adventure existe um grande número de referências para artes, como artistas,
-                    músicas, bandas, escritores e etc. Muitas dessas referencias são ecos das influências artísticas de
-                    Hirohiko Araki. Confira abaixo algumas delas:</p>
-                    <br>
-                <ul>
-                    <li>O nome de Dio Brando vem do cantor de heavy metal Ronnie James Dio, fundador da banda Dio.</li>
-                    <li>O sobrenome Zeppeli vem da banda de rock inglesa Led Zeppelin.</li>
-                    <li>O nome de Tonpetty vem do músico americano Tom Petty.</li>
-                    <li>Os conceitos de design de Jonathan e Dio vieram de Sylvester Stallone e Arnold Schwarzenegger, que
-                        tiveram seus filmes populares na época.</li>
-                    <li>Os nomes dos quatro Homens do Pilar vem das bandas Santana, Wham!, AC/DC e The Cars.</li>
-                </ul>
-            </div>
-        </div>
-    </section> -->
+    <button id="scrollUpButton" onclick="scrollToTop()">&#8679;</button>
+
+    <footer>
+        <p>&copy; 2023 Project JJBA. Todos os direitos reservados. <br> Projeto realizado por Julia Hown</p>
+    </footer>
 
 </html>
+
+<script>
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Mostra ou esconde o botão dependendo da posição do scroll
+    window.onscroll = function () {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById('scrollUpButton').style.display = 'block';
+        } else {
+            document.getElementById('scrollUpButton').style.display = 'none';
+        }
+    };
+</script>
