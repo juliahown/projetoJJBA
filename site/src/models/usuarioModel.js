@@ -42,16 +42,6 @@ function Pontos(fkUsuario, Pontuacao) {
     return database.executar(instrucao);
 }
 
-
-function qtdUsuarios() {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function qtdUsuarios():", );
-    var instrucao = `
-        SELECT COUNT(idusuario) AS TotalUsuarios FROM Usuario;
-    `;
-    console.log("Executando a instrução SQL: \n" + instrucao);
-    return database.executar(instrucao);
-}
-
 function PontosRanking() {
     console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function PontosRanking()");
     var instrucao = `
@@ -66,6 +56,5 @@ module.exports = {
     cadastrar,
     listar,
     Pontos,
-    qtdUsuarios,
     PontosRanking
 };

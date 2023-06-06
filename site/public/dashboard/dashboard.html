@@ -18,7 +18,7 @@
   <title>Dashboard Geral</title>
 </head>
 
-<body onload="obterDadosGrafico(),TotalUsers()">
+<body onload="obterDadosGrafico()">
   <div class="container">
     <aside>
       <nav>
@@ -61,11 +61,6 @@
       </div>
     </div>
 
-    <div class="analytics">
-      <span>Quantidade de usuários cadastrados</span>
-      <div id="quantidadeusuarios"></div>
-    </div>
-
   </div>
 </body>
 
@@ -74,19 +69,6 @@
 <script>
 
   b_usuario.innerHTML = sessionStorage.NOME_USUARIO;
-
-  function qtdUsuarios() {
-        fetch("/usuarios/qtdUsuarios", {
-            method: "get"
-        }).then(function (resposta) {
-            if (resposta.ok) {
-                resposta.json().then((json) => {
-                    console.log(json)
-                    quantidadeusuarios.innerHTML = `${json[0].TotalUsuarios}`
-                })
-            }
-        })
-    }
 
   let proximaAtualizacao;
 

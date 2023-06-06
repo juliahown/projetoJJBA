@@ -24,10 +24,6 @@ router.post("/Pontos", function (req, res) {
     usuarioController.Pontos(req, res)
 });
 
-router.get("/qtdUsuarios", function (req, res) {
-    usuarioController.qtdUsuarios(req, res);
-});
-
 router.get("/PontosRanking", function (req, res) {
     usuarioController.PontosRanking(req, res)
 });

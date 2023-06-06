@@ -127,23 +127,6 @@ function Pontos(req, res) {
     }
 }
 
-function qtdUsuarios(req, res) {
-    usuarioModel.qtdUsuarios()
-        .then(function (resultado) {
-            if (resultado.length > 0) {
-                res.status(200).json(resultado);
-            } else {
-                res.status(204).send("Nenhum resultado encontrado!")
-            }
-        }).catch(
-            function (erro) {
-                console.log(erro);
-                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
-                res.status(500).json(erro.sqlMessage);
-            }
-        );
-}
-
 function PontosRanking(req, res) {
     usuarioModel.PontosRanking()
         .then(function (resultado) {
@@ -166,7 +149,6 @@ module.exports = {
     cadastrar,
     listar,
     testar,
-    qtdUsuarios,
     Pontos,
     PontosRanking
 }
