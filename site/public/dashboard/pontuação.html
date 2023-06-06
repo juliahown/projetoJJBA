@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./pontuação.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="icon" href="../assets/logo.svg">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+  <title>Pontuação</title>
+</head>
+
+<body onload="obterDadosGrafico(),TotalUsers()">
+  <div class="container">
+    <aside>
+      <nav>
+        <ul>
+          <a href="#" class="logo">
+            <img src="../assets/logo.svg" alt="">
+            <span class="projectjjba">Project JJBA</span>
+          </a>
+          <li><a href="index.html"><span class="material-symbols-sharp">
+                home
+              </span>Home</a></li>
+          <li><a href="../quiz.html"><span class="material-symbols-sharp">
+                quiz
+              </span>Quiz</a></li>
+          <li><a href="../dashboard/dashboard.html"><span class="material-symbols-sharp">
+                dashboard
+              </span>Dashboard</a></li>
+          <li><a href="../personagens.html"><span class="material-symbols-sharp">
+                sentiment_satisfied
+              </span>Personagens</a></li>
+          <li><a href="../sobreanime.html"><span class="material-symbols-sharp">
+                favorite
+              </span>Anime</a></li>
+          <li><a href="../login.html"><span class="material-symbols-sharp">
+                logout
+              </span>SAIR</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <div class="charts-content">
+        <div class="chart-grid cols-1">
+            <h1>Pontuação Geral do Quiz</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <td>Posição</td>
+                        <td>Nome do Usuário</td>
+                        <td>Pontuação</td>
+                    </tr>
+                </thead>
+                <tbody class="ranking-list">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  </div>
+</body>
+
+</html>
+
+<script>
+
+addEventListener("DOMContentLoaded", () => {
+    fetch("/usuarios/PontosRanking", {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then((resposta) => {
+        if (resposta.ok) {
+            resposta.json().then(json => {
+                console.log(json[0]);
+                for (let contador = 0; contador < 5; contador++) {
+                    document.querySelector(".ranking-list").innerHTML += `
+                    <tr>
+                    <td>${contador + 1}</td>
+                    <td>${json[contador].Nome}</td>
+                    <td>${json[contador].TotalPontuação}</td>
+                    </tr>
+                    ` 
+                }
+            })
+        }
+    });
+});
+
+// Obtenha uma referência para o elemento canvas
+var ctx = document.getElementById('myChart').getContext('2d');
+
+// Crie o gráfico
+var myChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [{
+            label: 'Ranking de Usuário',
+            data: [],
+            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+
+console.log('----------------------------------------------')
+console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
+console.log(resposta)
+
+// Inserindo valores recebidos em estrutura para plotar o gráfico
+for (i = 0; i < resposta.length; i++) {
+    var registro = resposta[i];
+    labels.push(registro.Pontuacao);
+    dados.datasets[0].data.push(registro.Pontos);
+    // dados.datasets[1].data.push(registro.qntPet);
+}
+
+console.log('----------------------------------------------')
+console.log('O gráfico será plotado com os respectivos valores:')
+console.log('Labels:')
+console.log(labels)
+console.log('Dados:')
+console.log(dados.datasets)
+console.log('----------------------------------------------')
+
+// Criando estrutura para plotar gráfico - config
+const config = {
+    type: 'bar',
+    data: dados,
+};
+
+// Adicionando gráfico criado em div na tela
+let Rankingchart = new Chart(
+    document.getElementById(`RankingChart`),
+    config
+);
+
+</script>

@@ -1,0 +1,236 @@
+:root {
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+body {
+    background-color: #f1f1f1;
+}
+
+
+nav {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    left: 0;
+    background: #fff;
+    width: 90px;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 20px 35px rgba(0, 0, blue, 0.2);
+    text-decoration: none;
+}
+
+
+.logo {
+    text-align: center;
+    display: flex;
+    transition: all 0.5s ease;
+    margin-top: 3vh;
+}
+
+.logo img {
+    width: 69px;
+}
+
+.logo span {
+    font-weight: bold;
+    padding: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #95637F;
+}
+
+a {
+    position: relative;
+    color: rgb(85, 83, 83);
+    font-size: 14px;
+    display: table;
+    width: 200px;
+    padding: 10px;
+    top: 5px;
+    margin-left: 10px;
+}
+
+span {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    font-size: 28px;
+     text-align: center;
+}
+
+a:hover {
+    background: #eee;
+
+}
+
+nav:hover {
+    width: 200px;
+    transition: all 0.5s ease;
+
+}
+
+ul {
+    margin-top: 20vh;
+}
+
+.telagraph {
+    display: flex;
+    justify-content: center;
+    margin-top: 9vh;
+}
+
+.graph1 {
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin-left: 10vw;
+    background-color: #fff;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.graph1 h1 {
+    padding: 10px 10px;
+    margin-bottom: 3vh;
+}
+
+.graph2 h1 {
+    padding: 10px 10px;
+    margin-bottom: 3vh;
+}
+
+.graph2 {
+    position: relative;
+    width: 500px;
+    height: auto;
+    margin-left: 10vw;
+    background-color: #fff;
+    padding: 30px 30px;
+    border-radius: 20px;
+}
+
+.analytics {
+    position: relative;
+    margin-top: 10vh;
+    margin-left: 8vw;
+}
+
+.analytics span {
+    font-weight: 600;
+    margin-left: 10vw;
+    font-size: 30px;
+    color: #95637F;
+    text-shadow: 1px 1px 1px #fff, 
+               3px 3px 5px #beb6b6;
+}
+
+.charts-content {
+    padding: 1rem;
+    /* border: 2px dashed #000; */
+    border-radius: 8px;
+    margin-top: 96px;
+    min-height: 80vh;
+    margin: 0 auto;
+    max-width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .chart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    background-color: #ffffff;
+    height: 100%;
+    min-height: 384px;
+    max-width: 760px;
+    padding: 1rem;
+    position: relative;
+    transition: background-color 0.1s ease-in;
+  
+  }
+  
+  .chart:hover {
+    background-color: #f9fafb;
+    transition: background-color 0.1s ease-in;
+  }
+  
+  .chart canvas {
+    width: 85%;
+    height: 85%;
+  }
+  
+  .chart-grid {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
+  .cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  
+  .cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  
+  .ultimaAtt{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    color: RGB(102, 102, 102);
+    font-size: .7rem;
+  }
+  
+  table {
+    background-color: #ffffff;
+    padding: 1rem;
+    border: #f1f1f1 1px solid;
+    border-radius: 8px;
+    border-collapse: collapse;
+    /* box-shadow: 2px 1px 2px #dadce0; */
+  }
+  
+  thead {
+    border-bottom: 2px solid #9ca3af;
+    color: #374151 ;
+  }
+  
+  td {
+    padding: 1rem 2rem;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #e5e7eb;
+  }
+  
+  tr {
+    overflow: hidden;
+  }
