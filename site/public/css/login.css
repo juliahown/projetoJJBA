@@ -25,6 +25,7 @@ body {
 
 .formulario {
     align-items: center;
+    margin-right: 32px;
 }
 
 .formulario > h2 {
