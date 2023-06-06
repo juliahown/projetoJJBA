@@ -45,12 +45,48 @@ export default [
         ],
     },
     {
-        question: "No total, existem quantas partes de JoJo?",
+        question: "Qual é o nome do usuário do Stand Sex Pistols em Parte 5, Golden Wind?",
         answers: [
-            { option: "9", correct: true},
-            { option: "8", correct: false},
-            { option: "7", correct: false},
-            { option: "6", correct: false},
+            { option: "Joseph Joestar", correct: false},
+            { option: "Kakyoin Noriaki", correct: false},
+            { option: "Guido Mista", correct: true},
+            { option: "Okuyasu Nijimura", correct: false},
+        ],
+    },
+    {
+        question: "Qual é o nome do vilão principal da Parte 4, Diamond is Unbreakable?",
+        answers: [
+            { option: "Narancia Ghirga", correct: false},
+            { option: "Rohan Kishibe", correct: false},
+            { option: "Sticky Fingers", correct: false},
+            { option: "Yoshikage Kira", correct: true},
+        ],
+    },
+    {
+        question: "Qual o nome do Stand de Jean Pierre Polnareff na Parte 5, Vento Aureo?",
+        answers: [
+            { option: "Gold Experience Requiem", correct: false},
+            { option: "Silver Chariot & Chariot Requiem", correct: true},
+            { option: "Purple Haze", correct: false},
+            { option: "Star Platinum: The World", correct: false},
+        ],
+    },
+    {
+        question: "Qual é o nome do Stand do personagem principal da sexta temporada, Stone Ocean?",
+        answers: [
+            { option: "Foo Fighters", correct: false},
+            { option: "Weather Report ", correct: false},
+            { option: "Stone Free", correct: true},
+            { option: "Goo Goo Dolls", correct: false},
+        ],
+    },
+    {
+        question: "Qual é o nome da organização secreta que é um dos principais antagonistas na quarta temporada, Diamond is Unbreakable?",
+        answers: [
+            { option: "Smooth Operators", correct: false},
+            { option: "Arrow Cross House", correct: true},
+            { option: "Wekapipo", correct: false},
+            { option: "Born This Way", correct: false},
         ],
     },
 ];
