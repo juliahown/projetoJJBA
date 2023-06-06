@@ -33,12 +33,11 @@ FOREIGN KEY (fkTemporada)
 	REFERENCES Temporada(idTemporada)
 );
 
-CREATE TABLE Pontuacao (
+CREATE TABLE Pontos (
 idPontuacao INT PRIMARY KEY auto_increment,
 fkUsuario INT,
 FOREIGN KEY (fkUsuario) REFERENCES Usuario(idUsuario),
-Pontuacao INT,
-PercentualPontos FLOAT
+Pontuacao INT
 ) auto_increment = 100;
 
 /* esta tabela deve estar de acordo com o que está em INSERT de sua API do arduino - dat-acqu-ino */
