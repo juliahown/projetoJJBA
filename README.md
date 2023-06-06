@@ -22,4 +22,4 @@ O projeto tem como temática o mangá JoJo's Bizarre Adventure (em japônes ジ�
 </div>
 <br>
 
- <h3 align="center"> Status do projeto: <b> EM ANDAMENTO </b> </h3>
+ <h3 align="center"> Status do projeto: <b> Finalizado </b> </h3>
