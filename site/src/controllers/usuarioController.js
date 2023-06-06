@@ -100,8 +100,35 @@ function cadastrar(req, res) {
     }
 }
 
+function Pontos(req, res) {
+    var idUsuario = req.body.idUsuarioServer;
+    var pontuacao = req.body.pontuacaoServer;
+
+    if (pontuacao == undefined) {
+        res.status(400).send("Sua pontuação está undefined!");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.Pontos(idUsuario, pontuacao)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        "\nHouve um erro ao realizar o cadastro! Erro: ",
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 function qtdUsuarios(req, res) {
-    usuarioModel.quantidade_usuarios()
+    usuarioModel.qtdUsuarios()
         .then(function (resultado) {
             if (resultado.length > 0) {
                 res.status(200).json(resultado);
@@ -117,31 +144,22 @@ function qtdUsuarios(req, res) {
         );
 }
 
-function Pontuacao(req, res) {
-    var idUsuario = req.body.idUsuarioServer;
-    var pontuação = req.body.pontuaçãoServer;
-
-    if (pontuação == undefined) {
-        res.status(400).send("Sua pontuação está undefined!");
-    } else {
-        
-        usuarioModel.Pontuacao(idUsuario, pontuação)
-            .then(
-                function (resultado) {
-                    res.json(resultado);
-                }
-            ).catch(
-                function (erro) {
-                    console.log(erro);
-                    console.log(
-                        "\nHouve um erro ao cadastrar a pontuação! Erro: ",
-                        erro.sqlMessage
-                    );
-                    res.status(500).json(erro.sqlMessage);
-                }
-            );
-    }
-}
+function PontosRanking(req, res) {
+    usuarioModel.PontosRanking()
+        .then(function (resultado) {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado);
+            } else {
+                res.status(204).send("Nenhum resultado encontrado!")
+            }
+        }).catch(
+            function (erro) {
+                console.log(erro);
+                console.log("Houve um erro ao realizar a consulta! Erro: ", erro.sqlMessage);
+                res.status(500).json(erro.sqlMessage);
+            }
+        );
+} 
 
 module.exports = {
     entrar,
@@ -149,5 +167,6 @@ module.exports = {
     listar,
     testar,
     qtdUsuarios,
-    Pontuacao
+    Pontos,
+    PontosRanking
 }

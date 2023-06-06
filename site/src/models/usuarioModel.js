@@ -32,21 +32,30 @@ function cadastrar(Nome, Email, Senha, fkPersonagem, fkTemporada) {
 }
 
 
-function Pontuacao(idUsuario, PontuaçãoUsuario) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n Pontuacao():", idUsuario, PontuaçãoUsuario);
+function Pontos(fkUsuario, Pontuacao) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n Pontos():", fkUsuario, Pontuacao);
 
     var instrucao = `
-        INSERT INTO Pontuacao (fkUsuario, TotalPontuacao) VALUES (${idUsuario}, ${PontuaçãoUsuario});
+        INSERT INTO Pontos (fkUsuario, Pontuacao) VALUES (${fkUsuario}, ${Pontuacao});
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
 }
 
 
-function qtdUsuarios(idUsuario) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function qtdUsuarios():", idUsuario);
+function qtdUsuarios() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function qtdUsuarios():", );
     var instrucao = `
-        SELECT COUNT(idusuario) AS NumeroUsuarios FROM Usuario;
+        SELECT COUNT(idusuario) AS TotalUsuarios FROM Usuario;
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+function PontosRanking() {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function PontosRanking()");
+    var instrucao = `
+    SELECT Usuario.Nome, Pontos.Pontuacao as TotalPontuação FROM Pontos JOIN Usuario ON fkUsuario = idUsuario ORDER BY TotalPontuação DESC;
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -56,6 +65,7 @@ module.exports = {
     entrar,
     cadastrar,
     listar,
-    Pontuacao,
-    qtdUsuarios
+    Pontos,
+    qtdUsuarios,
+    PontosRanking
 };
