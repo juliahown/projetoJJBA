@@ -2,7 +2,7 @@
 
 <h1> :pushpin: Projeto JJBA - JoJo's Bizarre Adventure</h1>
 Esse projeto foi desenvolvido como um projeto individual, requisito para o 1° semestre do curso de ADS na SPTech. <br>
-O projeto tem como temática o mangá JoJo's Bizarre Adventure (em japônes ジョジョの奇妙な冒険 JoJo no Kimyou na Bouken), escrito e ilustrado por Hirohiko Araki. A proposta é um website feito de fã para fã, com informações sobre a obra e os personagens, e também, um quiz para saber com qual dos protagonistas você mais se parece, gerando estatísticas com os personagens os quais mais se assemelha e ao fim, saber a porcentagem dos usuários que realizaram o teste se parecem com o personagem resultado do quiz.
+O projeto tem como temática o mangá JoJo's Bizarre Adventure (em japônes ジョジョの奇妙な冒険 JoJo no Kimyou na Bouken), escrito e ilustrado por Hirohiko Araki. A proposta é um website feito de fã para fã, com informações sobre a obra e os personagens, e também, um quiz para desafiar os conhecimentos do público que já é fã dessa série, exibindo ao final um ranking com os usuários que tiveram mais pontos. Além disso, o usuário consegue ver ver e comparar os personagens favoritos dos usuários através de gráficos.
 
 <div>
   <h3> :notebook: Linguagens utilizadas no projeto </h3>
